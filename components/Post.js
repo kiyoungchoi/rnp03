@@ -13,12 +13,12 @@ export default class Post extends React.Component {
       const imageHeight =  250
       const scaleFactor = height / imageHeight
       const imageWidth = width / scaleFactor
-      this.setState({width: imageWidth, height: imageHeight})
+      this.setState({width:imageWidth, height: imageHeight})
     })
   }
 
   render () {
-    const {width, height} = this.state
+    const { width, height } = this.state 
     return (
       <View>
         <View style={styles.imageContainer}>

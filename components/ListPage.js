@@ -64,6 +64,7 @@ class ListPage extends React.Component {
           }}/>
         </Modal>
 
+      {/* In renderRow, 함수의 매개변수로 변수를 지정한것이다. ex) rowData(기본), post, ... 관련이름이 좋겠지?*/}
         <ListView
           enableEmptySections={true}
           dataSource={this.state.dataSource}
