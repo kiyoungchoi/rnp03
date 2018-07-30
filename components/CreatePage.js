@@ -24,6 +24,7 @@ class CreatePage extends React.Component {
   state = {
     description: '',
     imageUrl: '',
+    name:''
   }
 
   render () {
@@ -54,12 +55,21 @@ class CreatePage extends React.Component {
             />
           </View>
         </View>
+        {/*onChange vs onChangeText는 복잡한 함수나, 데이터를 다루는게 더 논리적이라면, onchange, onChangeText는 간단한 콜백*/}
+        {/*예시로 <TextInput onChange={this.함수명}> vs <Textinput onChangeText={(text) => this.setState({ state안에 변수명 : text})}>*/}
         <TextInput
           style={styles.descriptionInput}
           placeholder='Type a description...'
           onChangeText={(text) => this.setState({description: text})}
           value={this.state.description}
         />
+         <TextInput
+          style={styles.nameInput}
+          placeholder='Type a name...'
+          onChangeText={(text) => this.setState({name: text})}
+          value={this.state.name}
+        />
+        {console.log(this.state)}
 
         <View style={styles.buttons}>
           <TouchableHighlight
@@ -118,6 +128,11 @@ const styles = StyleSheet.create({
   imageUrlInput: {
     color: 'rgba(42,126,211,1)',
     height: 60,
+  },
+  nameInput:{
+    color: '#9e9e9e',
+    height: 100,
+    paddingHorizontal : 20
   },
   descriptionInput: {
     paddingHorizontal: 20,
