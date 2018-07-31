@@ -8,7 +8,8 @@ import {
   ListView,
   Modal,
   StyleSheet,
-  Text
+  Text,
+  ScrollView
 } from 'react-native'
 import CreatePage from './CreatePage'
 
@@ -26,6 +27,7 @@ class ListPage extends React.Component {
 
   constructor(props) {
     super(props)
+    // react native에 속해있는 기본 틀.
     const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2})
     this.state = {
       dataSource: ds.cloneWithRows([]),
@@ -75,6 +77,20 @@ class ListPage extends React.Component {
             />
           )}
         />
+        <ScrollView horizontal={ true }>
+           <Text>Child 1</Text>
+           <Text>Child 2</Text>
+           <Text>Child 3</Text>
+           <Text>Child 4</Text>
+           <Text>Child 5</Text>
+           <Text>Child 6</Text>
+           <Text>Child 7</Text>
+           <Text>Child 8</Text>
+           <Text>Child 9</Text>
+           <Text>Child 10</Text>
+           <Text>Child 11</Text>
+           <Text>Child 12</Text>
+        </ScrollView>
         <TouchableHighlight
           style={styles.createPostButtonContainer}
           onPress={this._createPost}
