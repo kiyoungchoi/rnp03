@@ -22,6 +22,14 @@ const allPostsQuery = gql`
       description
     }
   }`
+  const allStoriesQuery = gql`
+    query{
+      allStories(orderBy: createdAt_Desc){
+        id
+        name
+        text
+      }
+    }`
 
 
 class ListPage extends React.Component {
@@ -116,5 +124,6 @@ const styles = StyleSheet.create({
   }
 })
 
-export default graphql(allPostsQuery, {name: 'allPostsQuery'})(ListPage)
+export default graphql(allPostsQuery, {name: 'allPostsQuery'})(ListPage);
+// export default graphql(allStoriesQuery, {name: 'allStoriesQuery'})(ListPage);
 
