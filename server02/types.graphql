@@ -9,3 +9,9 @@ type Post @model {
   description: String!
   imageUrl: String!
 }
+
+type Story @model {
+  id: ID! @isUnique
+  name : String!
+  text: String!
+}
