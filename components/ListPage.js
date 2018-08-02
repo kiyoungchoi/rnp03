@@ -76,23 +76,29 @@ class ListPage extends React.Component {
         </Modal>
 
       {/* In renderRow, 함수의 매개변수로 변수를 지정한것이다. ex) rowData(기본), post, ... 관련이름이 좋겠지?*/}
-        <ListView
-          enableEmptySections={true}
-          dataSource={this.state.dataSource}
-          renderRow={(post) => (
-            <Post
-              description={post.description}
-              imageUrl={post.imageUrl}
-            />
-          )}
-        />
-        <SideScrcon />
-        <TouchableHighlight
-          style={styles.createPostButtonContainer}
-          onPress={this._createPost}
-        >
-          <Text style={styles.createPostButton}>Create Post</Text>
-        </TouchableHighlight>
+
+
+          <View style={styles.upperad}>
+          <Text></Text>
+          </View>
+           <ListView
+            enableEmptySections={true}
+            dataSource={this.state.dataSource}
+            renderRow={(post) => (
+              <Post
+                description={post.description}
+                imageUrl={post.imageUrl}
+              />
+            )}
+          />
+          <SideScrcon />
+          <TouchableHighlight
+            style={styles.createPostButtonContainer}
+            onPress={this._createPost}
+          >
+            <Text style={styles.createPostButton}>Create Post</Text>
+          </TouchableHighlight>
+
       </View>
     )
   }
@@ -108,6 +114,13 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingTop: 22
+  },
+  upperad : {
+    flex:1,
+    backgroundColor:'#9e9e9e'
+  },
+  lowerad : {
+    flex:2
   },
   createPostButtonContainer: {
     justifyContent: 'center',

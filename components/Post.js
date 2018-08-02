@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
   imageContainer: {
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'rgba(0,0,0,.07)'
+    backgroundColor: 'rgba(0,0,0,.07)',
   },
   title: {
     padding: 22,

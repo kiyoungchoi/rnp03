@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import { View, ScrollView, Text } from 'react-native';
+import { View, ScrollView, Text, StyleSheet  } from 'react-native';
 
 
 // export default class SideScrCon extends Component{
@@ -10,8 +10,8 @@ import { View, ScrollView, Text } from 'react-native';
 
 export default function SideScrCon(prop){
     return(
-        <ScrollView horizontal={ true }>
-           <Text>Child 1</Text>
+        <ScrollView horizontal={true}>
+           <Text style={styles.position}>Child 1</Text>
            <Text>Child 2</Text>
            <Text>Child 3</Text>
            <Text>Child 4</Text>
@@ -24,5 +24,12 @@ export default function SideScrCon(prop){
            <Text>Child 11</Text>
            <Text>Child 12</Text>
         </ScrollView>
+        
     )
 }
+
+const styles = StyleSheet.create({
+    position : {
+        flex: 1,
+    }
+})
